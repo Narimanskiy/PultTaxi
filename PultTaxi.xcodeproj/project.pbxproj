@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		CE29975826341E6B003F57F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29975726341E6B003F57F6 /* AppDelegate.swift */; };
 		CE29975A26341E6B003F57F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29975926341E6B003F57F6 /* SceneDelegate.swift */; };
-		CE29975C26341E6B003F57F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29975B26341E6B003F57F6 /* ViewController.swift */; };
+		CE29975C26341E6B003F57F6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29975B26341E6B003F57F6 /* WelcomeViewController.swift */; };
 		CE29975F26341E6B003F57F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE29975D26341E6B003F57F6 /* Main.storyboard */; };
 		CE29976126341E70003F57F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE29976026341E70003F57F6 /* Assets.xcassets */; };
 		CE29976426341E70003F57F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE29976226341E70003F57F6 /* LaunchScreen.storyboard */; };
+		CE29976D263429E2003F57F6 /* setupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29976C263429E1003F57F6 /* setupTextField.swift */; };
+		CE29977126342AA6003F57F6 /* SMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29977026342AA6003F57F6 /* SMSViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE29975426341E6B003F57F6 /* PultTaxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PultTaxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE29975726341E6B003F57F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE29975926341E6B003F57F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE29975B26341E6B003F57F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE29975B26341E6B003F57F6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CE29975E26341E6B003F57F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE29976026341E70003F57F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE29976326341E70003F57F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE29976526341E70003F57F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE29976C263429E1003F57F6 /* setupTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupTextField.swift; sourceTree = "<group>"; };
+		CE29977026342AA6003F57F6 /* SMSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +61,24 @@
 			isa = PBXGroup;
 			children = (
 				CE29975726341E6B003F57F6 /* AppDelegate.swift */,
+				CE29976C263429E1003F57F6 /* setupTextField.swift */,
 				CE29975926341E6B003F57F6 /* SceneDelegate.swift */,
-				CE29975B26341E6B003F57F6 /* ViewController.swift */,
+				CE29977326342AAC003F57F6 /* View Controllers */,
 				CE29975D26341E6B003F57F6 /* Main.storyboard */,
 				CE29976026341E70003F57F6 /* Assets.xcassets */,
 				CE29976226341E70003F57F6 /* LaunchScreen.storyboard */,
 				CE29976526341E70003F57F6 /* Info.plist */,
 			);
 			path = PultTaxi;
+			sourceTree = "<group>";
+		};
+		CE29977326342AAC003F57F6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE29975B26341E6B003F57F6 /* WelcomeViewController.swift */,
+				CE29977026342AA6003F57F6 /* SMSViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE29975C26341E6B003F57F6 /* ViewController.swift in Sources */,
+				CE29975C26341E6B003F57F6 /* WelcomeViewController.swift in Sources */,
+				CE29976D263429E2003F57F6 /* setupTextField.swift in Sources */,
 				CE29975826341E6B003F57F6 /* AppDelegate.swift in Sources */,
+				CE29977126342AA6003F57F6 /* SMSViewController.swift in Sources */,
 				CE29975A26341E6B003F57F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
