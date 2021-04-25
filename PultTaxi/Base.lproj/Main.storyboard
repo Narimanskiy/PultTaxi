@@ -62,6 +62,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.20797869560000001" green="0.47565138340000002" blue="0.94122260810000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="f0v-gU-XEU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2SD-9a-kHs"/>
                             <constraint firstItem="gJu-gT-5a4" firstAttribute="top" secondItem="f0v-gU-XEU" secondAttribute="bottom" constant="110" id="4DG-aU-avg"/>
@@ -82,6 +83,7 @@
                     <connections>
                         <outlet property="button" destination="xnz-yE-5rt" id="yLn-Pq-Mfy"/>
                         <outlet property="phoneTextField" destination="gJu-gT-5a4" id="o7c-aX-0Eh"/>
+                        <segue destination="u6O-Kd-OUp" kind="show" identifier="Sms Segue" id="gHx-Ph-RA8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -93,11 +95,11 @@
             <objects>
                 <viewController id="u6O-Kd-OUp" customClass="SMSViewController" customModule="PultTaxi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Op9-V7-YPJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RKg-tF-BdI">
-                                <rect key="frame" x="30" y="164" width="350" height="80"/>
+                                <rect key="frame" x="30" y="120" width="350" height="80"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" minimumFontSize="17" background="Rectangle Disable" disabledBackground="Rectangle Disable" translatesAutoresizingMaskIntoConstraints="NO" id="1de-Fi-Kk4" userLabel="tf1">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -157,13 +159,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код из СМС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-Mj-Z8a">
-                                <rect key="frame" x="30" y="116.5" width="271" height="32.5"/>
+                                <rect key="frame" x="30" y="72.5" width="271" height="32.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xw-PT-noX">
-                                <rect key="frame" x="20" y="304" width="370" height="70"/>
+                                <rect key="frame" x="20" y="260" width="370" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="7RZ-Zw-noB"/>
                                 </constraints>
