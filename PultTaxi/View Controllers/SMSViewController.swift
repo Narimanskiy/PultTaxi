@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SwiftKeychainWrapper
 
 class SMSViewController: UIViewController, UITextFieldDelegate {
     
@@ -109,7 +110,8 @@ class SMSViewController: UIViewController, UITextFieldDelegate {
         let smsCode: String = tf1.text! + tf2.text! + tf3.text! + tf4.text!
         if smsCode == "9999" {
             authService.getToken(phoneNumber: phoneNumber, password: smsCode) { (token) in
-                print(token)
+                KeychainWrapper.standard.set(token, forKey: "token")
+                self.performSegue(withIdentifier: "Info Segue", sender: nil)
             }
         } else if smsCode.count >= 1 && smsCode.count < 4 {
             let alert = UIAlertController(title: "Некорректный СМС!", message: nil, preferredStyle: .alert)

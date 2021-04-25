@@ -25,7 +25,6 @@ class HttpService {
     
     private func sendGet(_ endpoint: String, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, encoding: ParameterEncoding = URLEncoding.default) -> DataRequest {
         let req = AF.request(self.url + endpoint, method: .get, parameters: parameters, encoding: encoding, headers: headers)
-        print(self.url + endpoint)
         return req
     }
 }

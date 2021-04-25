@@ -7,11 +7,16 @@
 
 import UIKit
 import Alamofire
+import SwiftKeychainWrapper
 
 class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let token = KeychainWrapper.standard.string(forKey: "token") {
+            clientService.getInfo(token: token)
+        }
+        
 
         
     }
