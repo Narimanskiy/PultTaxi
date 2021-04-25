@@ -16,6 +16,7 @@ class SMSViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tf4: UITextField!
     @IBOutlet weak var button: UIButton!
     var phoneNumber = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,14 +106,12 @@ class SMSViewController: UIViewController, UITextFieldDelegate {
     
     
     func getToken() {
-        let smsCode: String? = tf1.text! + tf2.text! + tf3.text! + tf4.text!
+        let smsCode: String = tf1.text! + tf2.text! + tf3.text! + tf4.text!
         if smsCode == "9999" {
-            let authUrl = "https://dev.pulttaxi.ru/api/authenticateClients?"
-            let parameters = ["phone_number": "7777777777", "password": smsCode]
-            AF.request(authUrl, method: .post, parameters: parameters).responseJSON { response in
-            print(response)
-        }
-        } else if smsCode!.count >= 1 && smsCode!.count < 4 {
+            authService.getToken(phoneNumber: phoneNumber, password: smsCode) { (token) in
+                print(token)
+            }
+        } else if smsCode.count >= 1 && smsCode.count < 4 {
             let alert = UIAlertController(title: "Некорректный СМС!", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Упс!", style: .cancel, handler: nil))
             present(alert, animated: true)
@@ -122,7 +121,7 @@ class SMSViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "Отмена!", style: .cancel, handler: nil))
             present(alert, animated: true)
             return
-        } else if smsCode?.count == 4 && smsCode! != "9999" {
+        } else if smsCode.count == 4 && smsCode != "9999" {
             let alert = UIAlertController(title: "Неправильный СМС!", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Вспоминаю!", style: .cancel, handler: nil))
             present(alert, animated: true)

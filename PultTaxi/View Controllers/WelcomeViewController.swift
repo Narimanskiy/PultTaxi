@@ -82,11 +82,13 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
             present(alert, animated: true)
         }
         if phoneTextField.text?.count == 10 {
-            let url = "https://dev.pulttaxi.ru/api/requestSMSCodeClient?"
-            let parameter = ["phone_number": phoneTextField.text]
-            AF.request(url, method: .get, parameters: parameter).responseJSON { response in
-                print(response)
-            }
+//            let url = "https://dev.pulttaxi.ru/api/requestSMSCodeClient?"
+//            let parameter = ["phone_number": phoneTextField.text]
+//            AF.request(url, method: .get, parameters: parameter).responseJSON { response in
+//                print(response)
+//            }
+            authService.sendPhoneNumber(phoneNumber: phoneTextField.text!)
+            
             performSegue(withIdentifier: "Sms Segue", sender: nil)
         }
         

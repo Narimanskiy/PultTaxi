@@ -199,11 +199,40 @@
                         <outlet property="tf2" destination="tuz-7F-TY1" id="gqZ-Sc-5pc"/>
                         <outlet property="tf3" destination="heM-gb-FVg" id="3Wu-xw-g4H"/>
                         <outlet property="tf4" destination="9fM-ym-0dR" id="EyN-Me-DRa"/>
+                        <segue destination="hd2-Xr-TGe" kind="show" identifier="Info Segue" id="RZK-i5-fkJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rND-mi-Aor" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="800" y="78"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="LLM-YW-L9G">
+            <objects>
+                <viewController id="hd2-Xr-TGe" customClass="AccountViewController" customModule="PultTaxi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfl-jF-iji">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NFX-Jj-usm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BPP-6X-bWU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NFX-Jj-usm" firstAttribute="top" secondItem="BPP-6X-bWU" secondAttribute="top" constant="44" id="6Yo-o8-hG4"/>
+                            <constraint firstItem="NFX-Jj-usm" firstAttribute="leading" secondItem="BPP-6X-bWU" secondAttribute="leading" id="8pQ-CI-VKQ"/>
+                            <constraint firstItem="NFX-Jj-usm" firstAttribute="trailing" secondItem="BPP-6X-bWU" secondAttribute="trailing" id="qaY-lk-OrZ"/>
+                            <constraint firstAttribute="bottom" secondItem="NFX-Jj-usm" secondAttribute="bottom" id="zp7-LD-d3x"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uds-CM-dus"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTD-Wk-tkl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.8550724637682" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>

@@ -17,7 +17,13 @@
 		CE29977126342AA6003F57F6 /* SMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29977026342AA6003F57F6 /* SMSViewController.swift */; };
 		CE29979626344CD7003F57F6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE29978026344CCB003F57F6 /* Alamofire.framework */; };
 		CE29979726344CD7003F57F6 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE29978026344CCB003F57F6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE29979B263561FF003F57F6 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29979A263561FE003F57F6 /* Structs.swift */; };
+		CE29979B263561FF003F57F6 /* Structs1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29979A263561FE003F57F6 /* Structs1.swift */; };
+		CE2997A42635BCB6003F57F6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997A32635BCB6003F57F6 /* AccountViewController.swift */; };
+		CE2997B52635CC8F003F57F6 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997B22635CC8F003F57F6 /* HttpService.swift */; };
+		CE2997B62635CC8F003F57F6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997B32635CC8F003F57F6 /* AuthService.swift */; };
+		CE2997B72635CC8F003F57F6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997B42635CC8F003F57F6 /* Config.swift */; };
+		CE2997B92635D066003F57F6 /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997B82635D066003F57F6 /* ClientService.swift */; };
+		CE2997BB2635D298003F57F6 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997BA2635D298003F57F6 /* Structs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +104,13 @@
 		CE29976C263429E1003F57F6 /* setupTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupTextField.swift; sourceTree = "<group>"; };
 		CE29977026342AA6003F57F6 /* SMSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSViewController.swift; sourceTree = "<group>"; };
 		CE29977526344CCB003F57F6 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
-		CE29979A263561FE003F57F6 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		CE29979A263561FE003F57F6 /* Structs1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs1.swift; sourceTree = "<group>"; };
+		CE2997A32635BCB6003F57F6 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		CE2997B22635CC8F003F57F6 /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		CE2997B32635CC8F003F57F6 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CE2997B42635CC8F003F57F6 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CE2997B82635D066003F57F6 /* ClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientService.swift; sourceTree = "<group>"; };
+		CE2997BA2635D298003F57F6 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +146,10 @@
 		CE29975626341E6B003F57F6 /* PultTaxi */ = {
 			isa = PBXGroup;
 			children = (
+				CE2997B12635CC16003F57F6 /* Services */,
 				CE29975726341E6B003F57F6 /* AppDelegate.swift */,
+				CE29979A263561FE003F57F6 /* Structs1.swift */,
 				CE29976C263429E1003F57F6 /* setupTextField.swift */,
-				CE29979A263561FE003F57F6 /* Structs.swift */,
 				CE29975926341E6B003F57F6 /* SceneDelegate.swift */,
 				CE29977326342AAC003F57F6 /* View Controllers */,
 				CE29975D26341E6B003F57F6 /* Main.storyboard */,
@@ -152,6 +165,7 @@
 			children = (
 				CE29975B26341E6B003F57F6 /* WelcomeViewController.swift */,
 				CE29977026342AA6003F57F6 /* SMSViewController.swift */,
+				CE2997A32635BCB6003F57F6 /* AccountViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -175,6 +189,18 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE2997B12635CC16003F57F6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE2997B32635CC8F003F57F6 /* AuthService.swift */,
+				CE2997B82635D066003F57F6 /* ClientService.swift */,
+				CE2997B42635CC8F003F57F6 /* Config.swift */,
+				CE2997B22635CC8F003F57F6 /* HttpService.swift */,
+				CE2997BA2635D298003F57F6 /* Structs.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,11 +332,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE29979B263561FF003F57F6 /* Structs.swift in Sources */,
+				CE2997BB2635D298003F57F6 /* Structs.swift in Sources */,
+				CE29979B263561FF003F57F6 /* Structs1.swift in Sources */,
 				CE29975C26341E6B003F57F6 /* WelcomeViewController.swift in Sources */,
+				CE2997A42635BCB6003F57F6 /* AccountViewController.swift in Sources */,
+				CE2997B62635CC8F003F57F6 /* AuthService.swift in Sources */,
 				CE29976D263429E2003F57F6 /* setupTextField.swift in Sources */,
 				CE29975826341E6B003F57F6 /* AppDelegate.swift in Sources */,
+				CE2997B52635CC8F003F57F6 /* HttpService.swift in Sources */,
+				CE2997B72635CC8F003F57F6 /* Config.swift in Sources */,
 				CE29977126342AA6003F57F6 /* SMSViewController.swift in Sources */,
+				CE2997B92635D066003F57F6 /* ClientService.swift in Sources */,
 				CE29975A26341E6B003F57F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
