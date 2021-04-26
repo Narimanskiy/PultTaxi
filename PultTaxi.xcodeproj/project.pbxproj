@@ -16,12 +16,13 @@
 		CE29976426341E70003F57F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE29976226341E70003F57F6 /* LaunchScreen.storyboard */; };
 		CE29976D263429E2003F57F6 /* setupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29976C263429E1003F57F6 /* setupTextField.swift */; };
 		CE29977126342AA6003F57F6 /* SMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29977026342AA6003F57F6 /* SMSViewController.swift */; };
-		CE2997A42635BCB6003F57F6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997A32635BCB6003F57F6 /* AccountViewController.swift */; };
 		CE2997B52635CC8F003F57F6 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997B22635CC8F003F57F6 /* HttpService.swift */; };
 		CE2997B62635CC8F003F57F6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997B32635CC8F003F57F6 /* AuthService.swift */; };
 		CE2997B72635CC8F003F57F6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997B42635CC8F003F57F6 /* Config.swift */; };
 		CE2997B92635D066003F57F6 /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997B82635D066003F57F6 /* ClientService.swift */; };
 		CE2997BB2635D298003F57F6 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997BA2635D298003F57F6 /* Structs.swift */; };
+		CE2997C22635F4BA003F57F6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997C12635F4BA003F57F6 /* AccountViewController.swift */; };
+		CE859F9826374791009CE23E /* ErrorHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859F9726374791009CE23E /* ErrorHandlers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,12 +52,13 @@
 		CE29976526341E70003F57F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE29976C263429E1003F57F6 /* setupTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupTextField.swift; sourceTree = "<group>"; };
 		CE29977026342AA6003F57F6 /* SMSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSViewController.swift; sourceTree = "<group>"; };
-		CE2997A32635BCB6003F57F6 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CE2997B22635CC8F003F57F6 /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		CE2997B32635CC8F003F57F6 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CE2997B42635CC8F003F57F6 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CE2997B82635D066003F57F6 /* ClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientService.swift; sourceTree = "<group>"; };
 		CE2997BA2635D298003F57F6 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		CE2997C12635F4BA003F57F6 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		CE859F9726374791009CE23E /* ErrorHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,7 @@
 			children = (
 				CE29975B26341E6B003F57F6 /* WelcomeViewController.swift */,
 				CE29977026342AA6003F57F6 /* SMSViewController.swift */,
-				CE2997A32635BCB6003F57F6 /* AccountViewController.swift */,
+				CE2997C12635F4BA003F57F6 /* AccountViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2997B32635CC8F003F57F6 /* AuthService.swift */,
+				CE859F9726374791009CE23E /* ErrorHandlers.swift */,
 				CE2997B82635D066003F57F6 /* ClientService.swift */,
 				CE2997B42635CC8F003F57F6 /* Config.swift */,
 				CE2997B22635CC8F003F57F6 /* HttpService.swift */,
@@ -260,8 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2997BB2635D298003F57F6 /* Structs.swift in Sources */,
+				CE859F9826374791009CE23E /* ErrorHandlers.swift in Sources */,
 				CE29975C26341E6B003F57F6 /* WelcomeViewController.swift in Sources */,
-				CE2997A42635BCB6003F57F6 /* AccountViewController.swift in Sources */,
+				CE2997C22635F4BA003F57F6 /* AccountViewController.swift in Sources */,
 				CE2997B62635CC8F003F57F6 /* AuthService.swift in Sources */,
 				CE29976D263429E2003F57F6 /* setupTextField.swift in Sources */,
 				CE29975826341E6B003F57F6 /* AppDelegate.swift in Sources */,

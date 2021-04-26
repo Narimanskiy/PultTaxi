@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftKeychainWrapper
 
 
 
@@ -54,6 +55,10 @@ extension Encodable {
     }
     return dictionary
   }
+}
+
+extension KeychainWrapper.Key {
+    static let token: KeychainWrapper.Key = "token"
 }
 
 
