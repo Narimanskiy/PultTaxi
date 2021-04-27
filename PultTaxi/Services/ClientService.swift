@@ -12,9 +12,9 @@ class ClientService: HttpService {
     init() {
         super.init(url: "\(AppConfig.baseUrl)/client")
     }
-
+    
     static let shared: ClientService = ClientService()
-
+    
     func getInfo(token: String, completion: @escaping (UserInfo) -> Void) {
         do {
             let decoder = JSONDecoder()
@@ -22,13 +22,11 @@ class ClientService: HttpService {
             let parameters = try Token(token: token).convertToAFParameters()
             super.get("/getInfo", parameters: parameters).responseDecodable(of: UserInfo.self, decoder: decoder) {
                 response in
-                print(response)
                 switch response.result {
                 case .success(let value):
                     completion(value)
                 case .failure(let error):
                     print(error)
-                    // TODO - Здесь нужно распарсить status и проверить status == "success"
                 }
             }
         } catch  {

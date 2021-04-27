@@ -55,7 +55,6 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         
         if let token = KeychainWrapper.standard.string(forKey: "token") {
-            print(token)
             ClientService.shared.getInfo(token: token) {
                 
                 userInfo in

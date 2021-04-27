@@ -20,18 +20,6 @@ class SMSViewController: UIViewController, UITextFieldDelegate {
     var phoneNumber = KeychainWrapper.standard.string(forKey: "phoneNumber")
     
     
-    /*
-     var seconds = 15
-     
-     let timer = Timer(...) {
-     seconds = seconds - 1
-     label.text = "Повторно через \(seconds)"
-     if seconds == 0 {
-     retryButton.isHidden = false
-     }
-     }
-     */
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -9,5 +9,5 @@ import Foundation
 
 
 struct AppConfig {
-   public static let baseUrl = "https://dev.pulttaxi.ru/api"
+    public static let baseUrl = "https://dev.pulttaxi.ru/api"
 }
