@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.4.3)
+  - IQKeyboardManager (6.5.6)
+  - SwiftKeychainWrapper (4.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - IQKeyboardManager
+  - SwiftKeychainWrapper
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManager
+    - SwiftKeychainWrapper
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
+
+PODFILE CHECKSUM: c11859616d0177bfeadc12eb7dd138a7c3dba3f9
+
+COCOAPODS: 1.10.1

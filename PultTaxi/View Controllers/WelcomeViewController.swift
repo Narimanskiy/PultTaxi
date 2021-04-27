@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import SwiftKeychainWrapper
+import IQKeyboardManager
 
 class WelcomeViewController: UIViewController, UITextFieldDelegate {
 
@@ -22,13 +23,8 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneTextField.delegate = self
-        
 
-
-
-        //Looks for single or multiple taps.
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-
 
         let attributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
@@ -45,46 +41,11 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
         destination.phoneNumber = phoneTextField.text!
     }
 
-    //Calls this function when the tap is recognized.
     @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        
         self.view.endEditing(true)
     }
     
-    func alertMessage() {
-        if (phoneTextField.text == "") {
-            let alert = UIAlertController(title: "Введите номер телефона!", message: nil, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "ОК", style: .cancel, handler: nil))
-            present(alert, animated: true)
-            return
-        } else if phoneTextField.text!.count < 10 {
-            let alert = UIAlertController(title: "Некорректный номер телефона!", message: nil, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
-            present(alert, animated: true)
-            return
-    }
-    }
-    
-//    private func textFieldShouldEndEditing(textField: UITextField!) -> Bool {
-//        let textField = phoneTextField.text
-//        if textField == "" {
-//            let alert = UIAlertController(title: "Введите номер телефона!", message: nil, preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "ОК", style: .cancel, handler: nil))
-//            present(alert, animated: true)
-//            return true
-//        } else if textField!.count < 10 {
-//            let alert = UIAlertController(title: "Некорректный номер телефона!", message: nil, preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
-//            present(alert, animated: true)
-//            return true
-//        }
-//        return false
-//    }
-
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        //if количество символов и textField
-        return true // или false
-    }
 
     @IBAction func buttonPressed(_ sender: Any) {
         let textField = phoneTextField.text

@@ -1,0 +1,6 @@
+framework module Pods_PultTaxi {
+  umbrella header "Pods-PultTaxi-umbrella.h"
+
+  export *
+  module * { export * }
+}
