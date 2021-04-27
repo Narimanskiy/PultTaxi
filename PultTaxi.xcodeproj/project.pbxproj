@@ -22,27 +22,8 @@
 		CE2997B92635D066003F57F6 /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997B82635D066003F57F6 /* ClientService.swift */; };
 		CE2997BB2635D298003F57F6 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997BA2635D298003F57F6 /* Structs.swift */; };
 		CE2997C22635F4BA003F57F6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2997C12635F4BA003F57F6 /* AccountViewController.swift */; };
-		CE7271BD2638146400E336FF /* AKMaskField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7271B92638144300E336FF /* AKMaskField.framework */; };
-		CE7271BE2638146400E336FF /* AKMaskField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE7271B92638144300E336FF /* AKMaskField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE859F9826374791009CE23E /* ErrorHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859F9726374791009CE23E /* ErrorHandlers.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CE7271B82638144300E336FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CE7271B32638144300E336FF /* AKMaskField.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 010F960A1DF2BFB000321C94;
-			remoteInfo = AKMaskField;
-		};
-		CE7271BA2638144300E336FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CE7271B32638144300E336FF /* AKMaskField.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 01959A161DF1BA7700C9E359;
-			remoteInfo = AKMaskFieldExample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CE29979826344CD7003F57F6 /* Embed Frameworks */ = {
@@ -51,7 +32,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE7271BE2638146400E336FF /* AKMaskField.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +58,6 @@
 		CE2997B82635D066003F57F6 /* ClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientService.swift; sourceTree = "<group>"; };
 		CE2997BA2635D298003F57F6 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		CE2997C12635F4BA003F57F6 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		CE7271B32638144300E336FF /* AKMaskField.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AKMaskField.xcodeproj; path = "AKMaskField-master/AKMaskField.xcodeproj"; sourceTree = "<group>"; };
 		CE859F9726374791009CE23E /* ErrorHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +67,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D734358979CFC3E14BEE349 /* Pods_PultTaxi.framework in Frameworks */,
-				CE7271BD2638146400E336FF /* AKMaskField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +85,6 @@
 		CE29974B26341E6B003F57F6 = {
 			isa = PBXGroup;
 			children = (
-				CE7271B32638144300E336FF /* AKMaskField.xcodeproj */,
 				CE29975626341E6B003F57F6 /* PultTaxi */,
 				CE29975526341E6B003F57F6 /* Products */,
 				CE29979526344CD7003F57F6 /* Frameworks */,
@@ -170,15 +147,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		CE7271B42638144300E336FF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CE7271B92638144300E336FF /* AKMaskField.framework */,
-				CE7271BB2638144300E336FF /* AKMaskFieldExample.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,35 +195,12 @@
 			mainGroup = CE29974B26341E6B003F57F6;
 			productRefGroup = CE29975526341E6B003F57F6 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CE7271B42638144300E336FF /* Products */;
-					ProjectRef = CE7271B32638144300E336FF /* AKMaskField.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CE29975326341E6B003F57F6 /* PultTaxi */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CE7271B92638144300E336FF /* AKMaskField.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AKMaskField.framework;
-			remoteRef = CE7271B82638144300E336FF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CE7271BB2638144300E336FF /* AKMaskFieldExample.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = AKMaskFieldExample.app;
-			remoteRef = CE7271BA2638144300E336FF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CE29975226341E6B003F57F6 /* Resources */ = {
