@@ -12,10 +12,10 @@ import SwiftKeychainWrapper
 
 
 class AccountViewController: UIViewController {
-
+    
     @IBOutlet weak var nameHeader: UILabel!
     @IBOutlet weak var nameText: UILabel!
-
+    
     @IBOutlet weak var phoneHeader: UILabel!
     @IBOutlet weak var phoneText: UILabel!
     
@@ -50,7 +50,7 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var registrationText: UILabel!
     
     var infoAll: UserInfo?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -106,10 +106,7 @@ class AccountViewController: UIViewController {
                 }
                 
                 self.registrationText.text = userInfo.needRegistration ? "Нужна" : "Не нужна"
-                
+            }
         }
-        
     }
-
-}
 }

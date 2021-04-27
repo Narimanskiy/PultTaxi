@@ -10,8 +10,8 @@ import Alamofire
 import SwiftKeychainWrapper
 
 class SMSViewController: UIViewController, UITextFieldDelegate {
-
-
+    
+    
     @IBOutlet weak var tf1: UITextField!
     @IBOutlet weak var tf2: UITextField!
     @IBOutlet weak var tf3: UITextField!
@@ -19,22 +19,22 @@ class SMSViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var button: UIButton!
     var phoneNumber = KeychainWrapper.standard.string(forKey: "phoneNumber")
     
-
+    
     /*
-    var seconds = 15
-
-    let timer = Timer(...) {
-        seconds = seconds - 1
-        label.text = "Повторно через \(seconds)"
-        if seconds == 0 {
-            retryButton.isHidden = false
-        }
-    }
+     var seconds = 15
+     
+     let timer = Timer(...) {
+     seconds = seconds - 1
+     label.text = "Повторно через \(seconds)"
+     if seconds == 0 {
+     retryButton.isHidden = false
+     }
+     }
      */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tf1.delegate = self
         tf2.delegate = self
         tf3.delegate = self
@@ -46,7 +46,7 @@ class SMSViewController: UIViewController, UITextFieldDelegate {
         
         view.addGestureRecognizer(tap)
     }
-
+    
     @objc func dismissKeyboard() {
         
         self.view.endEditing(true)
@@ -98,7 +98,7 @@ class SMSViewController: UIViewController, UITextFieldDelegate {
                 rectangleDisable(textField: textField)
                 tf3.becomeFirstResponder()
             }
-
+            
             if textField == tf1 {
                 rectangleDisable(textField: textField)
                 tf1.resignFirstResponder()
@@ -119,7 +119,7 @@ class SMSViewController: UIViewController, UITextFieldDelegate {
     func getToken() {
         
         let smsCode = tf1.text! + tf2.text! + tf3.text! + tf4.text!
-
+        
         if smsCode == "9999" {
             AuthService.shared.getToken(phoneNumber: phoneNumber!, password: smsCode, completion: {token in
                 KeychainWrapper.standard.set(token, forKey: "token")

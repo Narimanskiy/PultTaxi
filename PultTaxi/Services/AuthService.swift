@@ -33,7 +33,6 @@ class AuthService: HttpService {
                     } else {
                         completion(false)
                     }
-                    // TODO - Здесь нужно распарсить status и проверить status == "success"
                 case .failure(let error):
                     print(error)
                     completion(false)
@@ -55,7 +54,6 @@ class AuthService: HttpService {
                     completion(value.token)
                 case .failure(let error):
                     print(error)
-                    // TODO - Если не распарсился токен нужно распарсить error код
                     if let data = response.data,
                        let errorObject = try? decoder.decode(Error.self, from: data) {
                         errorCompletion(errorObject.error)
