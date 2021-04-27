@@ -39,7 +39,7 @@ class WelcomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "Sms Segue" else { return }
         guard let destination = segue.destination as? SMSViewController else { return }
-        destination.phoneNumber = "7\(getCleanPhoneNumber(phoneNumber: phoneTextField.text!))"
+        destination.phoneNumber = "7\(getCleanPhoneNumber(phoneNumber: phoneTextField.text ?? ""))"
     }
     
     @objc func dismissKeyboard() {
@@ -48,16 +48,17 @@ class WelcomeViewController: UIViewController {
     }
     
     private func getCleanPhoneNumber(phoneNumber: String) -> String {
-        let range = NSString(string: phoneNumber).range(of: phoneNumber)
-        return regex.stringByReplacingMatches(in: phoneNumber, options: [], range: range, withTemplate: "")
+        if phoneNumber.isEmpty {
+            return phoneNumber
+        } else {
+            let range = NSString(string: phoneNumber).range(of: phoneNumber)
+            return regex.stringByReplacingMatches(in: phoneNumber , options: [], range: range, withTemplate: "")
+        }
     }
     
     private func format(phoneNumber: String, shouldRemoveLastDigit: Bool) -> String {
         
-        
-        
-        var number = getCleanPhoneNumber(phoneNumber: phoneNumber)
-        
+        var number = getCleanPhoneNumber(phoneNumber: phoneNumber )
         
         if number.count > maxNumberCount {
             let maxIndex = number.index(number.startIndex, offsetBy: maxNumberCount)
@@ -72,7 +73,7 @@ class WelcomeViewController: UIViewController {
         let maxIndex = number.index(number.startIndex, offsetBy: number.count)
         let regRange = number.startIndex..<maxIndex
         
-        if number.count > 0 && number.count < 4 {
+        if number.count >= 0 && number.count < 4 {
             let pattern = "(\\d+)"
             number = number.replacingOccurrences(of: pattern, with: "($1)", options: .regularExpression, range: regRange)
         } else if number.count > 3 && number.count < 7 {
@@ -81,8 +82,8 @@ class WelcomeViewController: UIViewController {
         } else if number.count > 6 && number.count < 9 {
             let pattern = "(\\d{3})(\\d{3})(\\d+)"
             number = number.replacingOccurrences(of: pattern, with: "($1) $2-$3", options: .regularExpression, range: regRange)
-        } else if number.count >= 9 && number.count < 11 {
-            let pattern = "(\\d{3})(\\d{3})(\\d{2})(\\d{2})"
+        } else {
+            let pattern = "(\\d{3})(\\d{3})(\\d{2})(\\d*)"
             number = number.replacingOccurrences(of: pattern, with: "($1) $2-$3-$4", options: .regularExpression, range: regRange)
         }
         return number

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Token: Codable {
-    // TODO - токен не опциональный
+    
     var token: String
 }
 
@@ -21,7 +21,7 @@ struct Status: Codable {
 }
 
 struct UserInfo: Codable {
-    // TODO minor - тут явно не все параметры опциональные, нужно смотреть структуру данных
+    
     let status, id: Int
     let phoneNumber, name, email: String
     let sex: String?
@@ -30,7 +30,7 @@ struct UserInfo: Codable {
     let activeOrder: Int?
     let organizationID: Int?
     let needRegistration: Bool
-
+    
     enum CodingKeys: String, CodingKey {
         case status, id
         case phoneNumber, name, email
@@ -56,5 +56,5 @@ struct UserInfo: Codable {
         organizationID = try? values.decode(Int.self, forKey: .organizationID)
         needRegistration = try values.decode(Bool.self, forKey: .needRegistration)
     }
-
+    
 }
